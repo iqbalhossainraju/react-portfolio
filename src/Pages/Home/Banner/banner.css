@@ -21,6 +21,11 @@ h4 {
     width: 100%;
 }
 
+.btn {
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
 .social-media {
     list-style-type: none;
     font-size: 20px;
