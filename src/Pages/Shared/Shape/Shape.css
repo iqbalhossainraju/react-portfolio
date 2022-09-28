@@ -1,4 +1,4 @@
-.ocean {
+/* .ocean {
     height: 5%;
     width: 100%;
     position: absolute;
@@ -54,7 +54,7 @@
     .waveShape-2 {
         display: block;
     }
-}
+} */
 
 @media only screen and (min-width: 992px) {
     .waveShape-2 {
