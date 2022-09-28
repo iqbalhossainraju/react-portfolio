@@ -9,3 +9,11 @@
     margin-left: auto;
     margin-right: auto;
 }
+
+.font-sizing span {
+    font-weight: 800;
+}
+
+.skill-details {
+    align-items: center;
+}

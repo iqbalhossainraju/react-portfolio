@@ -1,0 +1,13 @@
+.explore-btn {
+    border: none;
+    padding: 15px;
+    background: linear-gradient(rgba(225, 112, 85, 1), rgb(177, 40, 22));
+}
+
+.explore-btn a {
+    text-decoration: none;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    color: #fff;
+}
