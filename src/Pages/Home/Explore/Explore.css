@@ -11,3 +11,7 @@
     font-weight: bold;
     color: #fff;
 }
+
+.explore-btn a:hover {
+    color: rgb(177, 40, 22);
+}
