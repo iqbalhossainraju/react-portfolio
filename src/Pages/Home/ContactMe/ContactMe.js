@@ -21,12 +21,12 @@ const ContactMe = () => {
     return (
         <div>
             <div className="container">
-                <div className="section-title  mt-5">
+                <div className="section-title mt-5">
                     <h1>CONT<span className="text-danger">A</span>CT ME</h1>
                     <p className="undermark"></p>
                 </div>
 
-                <div className="row">
+                <div className="row contacts">
                     <div className="col-md-6 col-12">
                         <img className="img-fluid" src={contactImage} alt="contactImage" />
                     </div>
