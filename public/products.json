@@ -2,13 +2,13 @@
     {
         "id": "1",
         "image": "https://i.ibb.co/DQ88dP1/Hoodie-Front-Side-Mockup.png",
-        "price": 799,
-        "name": "Hoodie - We are Dagonbhuiyan"
+        "price": 650,
+        "name": "Hoodie - Amgo Bari Dagonbhuiyan"
       },
     {
-        "id": "1",
+        "id": "2",
         "image": "https://i.ibb.co/6XHFV6H/Feni-Hoodie-Front-Side-Mockup.png",
-        "price": 799,
-        "name": "Hoodie - We are Dagonbhuiyan"
+        "price": 650,
+        "name": "Hoodie - Amgo Bari Feni"
       }
 ]

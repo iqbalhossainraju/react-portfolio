@@ -13,14 +13,16 @@ const Product = ({ product }) => {
         navigate('/BuyOrder')
     }
     return (
-        <div className="product col-sm-12 col-md-6 col-lg-4 g-3">
+        <div className="product col-sm-12 col-md-6 col-lg-4 g-3 mb-5">
             <Card>
                 <Card.Img variant="top" src={image} />
                 <Card.Body>
                     <Card.Title> {name} </Card.Title>
-                    <p>Price: {price}</p>
+                    <p>Price: ৳ {price}</p>
                     <Card.Text>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, animi.
+                        <p>Cotton Cloth</p>
+                        <p>100% Comfortable</p>
+                        <p>Size: M,L,XL</p>
                     </Card.Text>
                     <Button className="btn btn-danger" onClick={navigateBuyOrder}><FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> Buy Now </Button>
                 </Card.Body>
