@@ -1,4 +1,7 @@
+import { faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import './Product.css';
 
@@ -10,13 +13,18 @@ const Product = ({ product }) => {
         navigate('/BuyOrder')
     }
     return (
-        <div>
-            <div className="product">
-                <img src={image} alt="" />
-                <h3>Name: {name}</h3>
-                <h3>Price: {price} taka</h3>
-                <button className="btn btn-outline-danger" onClick={navigateBuyOrder}>Buy Now</button>
-            </div>
+        <div className="product col-sm-12 col-md-6 col-lg-4 g-3">
+            <Card>
+                <Card.Img variant="top" src={image} />
+                <Card.Body>
+                    <Card.Title> {name} </Card.Title>
+                    <p>Price: {price}</p>
+                    <Card.Text>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, animi.
+                    </Card.Text>
+                    <Button className="btn btn-danger" onClick={navigateBuyOrder}><FontAwesomeIcon icon={faCartPlus}></FontAwesomeIcon> Buy Now </Button>
+                </Card.Body>
+            </Card>
         </div>
     );
 };

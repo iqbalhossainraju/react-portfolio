@@ -3,7 +3,9 @@ import './App.css';
 import Home from './Pages/Home/Home/Home';
 import Product from './Pages/Home/Product/Product';
 import Shop from './Pages/Home/Shop/Shop';
+import Skill from './Pages/Home/Skill/Skill';
 import BuyOrder from './Pages/Shared/BuyOrder/BuyOrder';
+import Footer from './Pages/Shared/Footer/Footer';
 import Header from './Pages/Shared/Header/Header';
 
 function App() {
@@ -12,10 +14,13 @@ function App() {
       <Header></Header>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/skill" element={<Skill />}></Route>
         <Route path="/shop" element={<Shop></Shop>}></Route>
         <Route path="/products" element={<Product></Product>}></Route>
         <Route path="/BuyOrder" element={<BuyOrder></BuyOrder>}></Route>
       </Routes>
+      <Footer></Footer>
     </div>
   );
 }

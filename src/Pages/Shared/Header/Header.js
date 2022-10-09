@@ -2,7 +2,6 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './Header.css';
 
 const Header = () => {
@@ -10,13 +9,14 @@ const Header = () => {
         <div>
             <Navbar bg="light" expand="lg">
                 <Container>
-                    <Navbar.Brand href="#home">Iqbal Portfolio</Navbar.Brand>
+                    <Navbar.Brand href="/">Iqbal Portfolio</Navbar.Brand>
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="ms-auto">
-                            <Nav.Link href="#home">Home</Nav.Link>
-                            <Nav.Link href="#about">About</Nav.Link>
-                            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                            <Nav.Link href="home">Home</Nav.Link>
+                            <Nav.Link href="skill">Skill</Nav.Link>
+                            <Nav.Link href="shop">Shop(temporary)</Nav.Link>
+                            {/* <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                                 <NavDropdown.Item href="#action/3.2">
                                     Another action
@@ -26,7 +26,7 @@ const Header = () => {
                                 <NavDropdown.Item href="#action/3.4">
                                     Separated link
                                 </NavDropdown.Item>
-                            </NavDropdown>
+                            </NavDropdown> */}
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

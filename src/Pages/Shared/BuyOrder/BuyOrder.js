@@ -1,11 +1,31 @@
-import React from 'react';
-import FloatingLabel from 'react-bootstrap/FloatingLabel';
-import Form from 'react-bootstrap/Form';
-import BdPaymentGateway from '../../../Images/icon/bd-payment-gateway.png';
+import emailjs from '@emailjs/browser';
+import React, { useRef } from 'react';
+import swal from 'sweetalert';
 import PaymentGateway from '../../../Images/icon/payment-gateway.png';
 import './BuyOrder.css';
 
 const BuyOrder = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_t59hzfa', 'template_61dpsz3', form.current, '1bM5Pg78xAubCrI-2')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+        swal({
+            position: 'top-end',
+            icon: 'success',
+            title: 'Thank You! contact You as very soon!',
+            showConfirmButton: false,
+            timer: 1500
+        })
+    };
     return (
         <div className="container">
             <div className="row buyOrder my-5" >
@@ -15,52 +35,30 @@ const BuyOrder = () => {
                 </div>
 
                 <div className="col-lg-6 col-md-6 col-12">
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="First Name"
-                        className="mb-3"
-                    >
-                        <Form.Control name="firstName" type="text" placeholder="Enter Your First Name" />
-                    </FloatingLabel>
-
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Last Name"
-                        className="mb-3"
-                    >
-                        <Form.Control name="lastName" type="text" placeholder="Enter Your Last Name" />
-                    </FloatingLabel>
-
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Mobile Number"
-                        className="mb-3"
-                    >
-                        <Form.Control name="phone" type="number" placeholder="example@0186..." />
-                    </FloatingLabel>
-
-                    <FloatingLabel
-                        controlId="floatingInput"
-                        label="Email address"
-                        className="mb-3"
-                    >
-                        <Form.Control name="email" type="email" placeholder="name@example.com" />
-                    </FloatingLabel>
-
-                    <div>
-                        <div className="payment-icon py-3">
-                            <img className="img-fluid" src={BdPaymentGateway} alt="BdPaymentGateway" />
-                        </div>
-                        <FloatingLabel
-                            controlId="floatingInput"
-                            label="Bkash Trans. ID"
-                            className="mb-3"
-                        >
-                            <Form.Control name="transId" type="text" placeholder="example@0186..." />
-                        </FloatingLabel>
-                    </div>
-
-                    <button className="btn btn-danger form-control">Submit</button>
+                    <form ref={form} onSubmit={sendEmail}>
+                        <>
+                            <label htmlFor="name">Enter your Full Name</label><br />
+                            <input className="form-control" type="text" name="user_name" id="name" placeholder="Enter your Full Name" required />
+                        </>
+                        <br />
+                        <>
+                            <label htmlFor="email">Enter your Email</label> <br />
+                            <input className="form-control" type="email" name="user_email" id="email" placeholder="Enter your Email" required />
+                        </>
+                        <br />
+                        <>
+                            <label htmlFor="number">Enter your Phone Number</label> <br />
+                            <input className="form-control" type="number" name="user_phone" id="phone" placeholder="Enter your Phone Number" required />
+                        </>
+                        <br />
+                        <>
+                            {/* <img className="img-fluid" src={AllPaymentGateway} alt="" /> */}
+                            <p className="bkash">Bkash: 01869175104</p>
+                            <label htmlFor="transactionsId">Transactions Id</label>
+                            <input className="form-control" type="text" name="message" id="transactionsId" placeholder="Enter your transactionsId" required />
+                        </>
+                        <input className="btn btn-danger form-control my-3" type="submit" value="Submit" />
+                    </form>
                 </div>
             </div>
         </div>

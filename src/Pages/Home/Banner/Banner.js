@@ -1,12 +1,34 @@
 import { faFacebook, faGithub, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from 'react';
+import swal from "sweetalert";
 import Profile from '../../../Images/header-img.png';
 import Shape from "../../Shared/Shape/Shape";
 
 import './banner.css';
 
 const banner = () => {
+
+    const downloadCv = (e) => {
+        if (downloadCv !== "https//") {
+            swal({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Something went wrong!',
+                footer: '<a href="https://www.facebook.com/iqbalhossainraju04/">Connected me on Facebook</a>'
+            });
+        }
+        //  else if (downloadCv === "https//") {
+        //     swal({
+        //         position: 'top-end',
+        //         icon: 'success',
+        //         title: 'Download Successfully!',
+        //         showConfirmButton: false,
+        //         timer: 1500
+        //     })
+        // }
+    }
+
     return (
         <div className="mt-4">
             <div className="container">
@@ -20,7 +42,7 @@ const banner = () => {
 
                         <div>
                             <p>Hi, My name is Iqbal Hossain Raju. Welcome to my portfolio. I am a skilled web designer & developer. In 2022 I want to make myself more efficient and I am working towards that goal. Everyone will pray for me and those who will hire me are given below my CV and various demos.</p>
-                            <button class="btn btn-danger py-3 my-3"><a className="text-decoration-none text-white" href="#">Download CV</a></button>
+                            <button onClick={downloadCv} class="btn btn-danger py-3 my-3"><a className="text-decoration-none text-white" href="https//">Download CV</a></button>
                         </div>
 
                         <div className="social-media pt-2">
@@ -28,10 +50,10 @@ const banner = () => {
                                 <h5>Follow me:</h5>
                             </div>
                             <div className="social-box-2 d-flex">
-                                <li> <a href="http://"> <FontAwesomeIcon icon={faFacebook} /> </a> </li>
-                                <li> <a href="http://"> <FontAwesomeIcon icon={faGithub} /> </a> </li>
-                                <li> <a href="http://"> <FontAwesomeIcon icon={faInstagram} /> </a> </li>
-                                <li> <a href="http://"> <FontAwesomeIcon icon={faLinkedin} /> </a> </li>
+                                <li> <a href="https://www.facebook.com/iqbalhossainraju04/" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faFacebook} /> </a> </li>
+                                <li> <a href="https://github.com/iqbalhossainraju" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faGithub} /> </a> </li>
+                                <li> <a href="https://www.instagram.com/iqbalhossain.official1/" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faInstagram} /> </a> </li>
+                                <li> <a href="https://www.linkedin.com/in/iqbal-hossain-b70836228/" target="_blank" rel="noreferrer"> <FontAwesomeIcon icon={faLinkedin} /> </a> </li>
                             </div>
                         </div>
                     </div>
