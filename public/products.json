@@ -1,14 +1,16 @@
 [
     {
-        "id": "1",
+        "_id": "1",
         "name": "Hoodie - Amgo Bari Dagonbhuiyan",
-        "image": "https://i.ibb.co/DQ88dP1/Hoodie-Front-Side-Mockup.png",
+        "img": "https://i.ibb.co/DQ88dP1/Hoodie-Front-Side-Mockup.png",
+        "description": "comfortable, cotton, garments menufactured",
         "price": 650
       },
     {
-        "id": "2",
+        "_id": "2",
         "name": "Hoodie - Amgo Bari Feni",
-        "image": "https://i.ibb.co/6XHFV6H/Feni-Hoodie-Front-Side-Mockup.png",
+        "img": "https://i.ibb.co/6XHFV6H/Feni-Hoodie-Front-Side-Mockup.png",
+        "description": "comfortable, cotton, garments menufactured",
         "price": 650
       }
 ]
