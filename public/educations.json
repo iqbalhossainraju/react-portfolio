@@ -1,0 +1,34 @@
+[
+    {
+        "_id": "1",
+        "name": "jsc",
+        "institute": "dagonbhuiyan Academy",
+        "passing_year": "2014",
+        "subject": "science",
+        "gpa": "4.31"
+    },
+    {
+        "_id": "2",
+        "name": "ssc",
+        "institute": "dagonbhuiyan Academy",
+        "passing_year": "2016",
+        "subject": "science",
+        "gpa": "5.00"
+    },
+    {
+        "_id": "3",
+        "name": "hsc",
+        "institute": "feni government college",
+        "passing_year": "2018",
+        "subject": "science",
+        "gpa": "3.00"
+    },
+    {
+        "_id": "4",
+        "name": "bba",
+        "institute": "daffodil institute of it",
+        "passing_year": "2022",
+        "subject": "bba- management",
+        "gpa": "running"
+    }
+]

@@ -1,26 +1,27 @@
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Home from './Pages/Home/Home/Home';
-import Product from './Pages/Home/Product/Product';
-import Shop from './Pages/Home/Shop/Shop';
-import Skill from './Pages/Home/Skill/Skill';
-import BuyOrder from './Pages/Shared/BuyOrder/BuyOrder';
-import Footer from './Pages/Shared/Footer/Footer';
-import Header from './Pages/Shared/Header/Header';
+import About from './Pages/Home/About';
+import Contacts from './Pages/Home/Contacts';
+import Educations from './Pages/Home/Educations/Educations';
+import Home from './Pages/Home/Home';
+import Skill from './Pages/Home/Skill';
+import Works from './Pages/Home/Works/Works';
+import Footer from './Pages/Shared/Footer';
+import Navbar from './Pages/Shared/Navbar';
 
 function App() {
   return (
-    <div>
-      <Header></Header>
+    <div className="max-w-7xl mx-auto">
+      <Navbar />
       <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
-        <Route path="/home" element={<Home></Home>}></Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="/about" element={<About />}></Route>
         <Route path="/skill" element={<Skill />}></Route>
-        <Route path="/shop" element={<Shop></Shop>}></Route>
-        <Route path="/products" element={<Product></Product>}></Route>
-        <Route path="/BuyOrder" element={<BuyOrder></BuyOrder>}></Route>
+        <Route path="/education" element={<Educations />}></Route>
+        <Route path="/work" element={<Works />}></Route>
+        <Route path="/contact" element={<Contacts />}></Route>
       </Routes>
-      <Footer></Footer>
+      <Footer />
     </div>
   );
 }
